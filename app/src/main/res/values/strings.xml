@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bottom Navigation App Bar</string>
+    <string name="hello">Bottom App Bar configuration</string>
 </resources>
