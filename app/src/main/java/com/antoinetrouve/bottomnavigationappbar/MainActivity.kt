@@ -29,14 +29,19 @@ class MainActivity : AppCompatActivity() {
             R.id.app_bar_fav -> toast("Fav menu item is clicked!")
             R.id.app_bar_search -> toast("Search menu item is clicked!")
             R.id.app_bar_settings -> toast("Settings item is clicked!")
+            android.R.id.home -> {
+                BottomNavigationDrawerFragment().run {
+                    show(supportFragmentManager, tag)
+                }
+            }
         }
         return true
     }
 
-    // This is an extension method for easy Toast call
-    internal fun Context.toast(message: CharSequence) {
-        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
-        toast.setGravity(Gravity.BOTTOM, 0, 325)
-        toast.show()
-    }
+}
+// This is an extension method for easy Toast call
+fun Context.toast(message: CharSequence) {
+    val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+    toast.setGravity(Gravity.BOTTOM, 0, 325)
+    toast.show()
 }
