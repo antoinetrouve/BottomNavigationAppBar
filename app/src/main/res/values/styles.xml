@@ -7,8 +7,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!-- override color on secondary to set floating button icon color -->
+        <!-- override to set icon's color of the floating button -->
         <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- override to set icon's color of the overflow menu button -->
+        <item name="android:textColorSecondary">@android:color/white</item>
     </style>
 
 </resources>
